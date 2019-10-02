@@ -4,3 +4,27 @@
 .carousel-item{
     max-height: 500px;
 }
+.card{
+    margin: 10px 0;
+}
+.card-img{
+    max-height: 500px;
+    margin-bottom: 10px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+i{
+    transition: color 0.4s;
+    color:rgb(218, 223, 234);
+}
+.plus{
+    width: 75%;
+    display:flex;
+    justify-content: flex-end;
+    margin: 20px auto 0;
+}
+.plus > i{
+    font-size: 3em;
+    color: #dadfea;
+}

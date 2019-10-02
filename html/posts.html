@@ -6,13 +6,15 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/bootstrap-grid.css">
     <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/custom.css">
 
     <title>Bootstrap</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Photo Central</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,7 +24,7 @@
                 <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="posts.html">About Us</a>
+                <a class="nav-link" href="posts.html">Posts</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="submission.html">Submissions</a>
@@ -30,9 +32,56 @@
         </ul>
     </div>
 </nav>
+<div class="d-flex flex-column align-items-center posts">
+        <div class="card col-lg-6 col-md-8 col-sm-10">
+
+            <div class="card-body">
+                <h5 class="card-title">Sunset</h5>
+                <img src="https://images.unsplash.com/photo-1500245804862-0692ee1bbee8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" class="card-img-top card-img"  alt="sunset">
+                <p class="card-text">This is a sunset picture.</p>
+                <div class="d-flex justify-content-between">
+                    <i class="fas fa-heart cursor-pointer" id="post1" onclick="like('post1')" onload="setColor(post1)"></i>
+                    <p class="card-text"><small class="text-muted">6 days ago</small></p>
+                </div>
+
+            </div>
+        </div>
+</div>
+<div class="plus" data-toggle="modal" data-target="#exampleModal">
+    <i class="fas fa-plus-circle"></i>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create new post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body d-flex flex-column">
+                <label for="title">Title</label>
+                <input type="text" id="title">
+                <label for="image">Image URL:</label>
+                <input type="text" id="image">
+                <label for="description">Description</label>
+                <input type="text" id="description">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="addNewPost()">Submit Post</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
+<script src="../js/main.js"></script>
 <script src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/bootstrap.bundle.js"></script>
 <script src="../js/bootstrap.js"></script>
